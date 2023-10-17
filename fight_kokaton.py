@@ -16,10 +16,12 @@ class Score:
         self.img = self.font.render("Score: 0", 0, self.color)
         self.img_rect = self.img.get_rect()
         self.img_rect.topleft = (100, HEIGHT - 50)
+ 
 
     def update(self, screen):
         self.img = self.font.render(f"Score: {self.value}", 0, self.color)
         screen.blit(self.img, self.img_rect)
+
 
 def check_bound(obj_rct: pg.Rect) -> tuple[bool, bool]:
     """
